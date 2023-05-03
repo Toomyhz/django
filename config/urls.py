@@ -18,5 +18,6 @@ from django.contrib import admin
 from django.urls import path
 from .views import *
 urlpatterns = [
+    path('', mostrar_inicio,name="inicio"),
     path('admin/', admin.site.urls),
 ]
