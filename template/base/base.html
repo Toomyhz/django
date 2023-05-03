@@ -8,6 +8,26 @@
     <title>
         {% block title %}{% endblock title %}
     </title>
+    {% block css%}
+    {% endblock css%}
+    <style>
+        body{
+            width: 100%;
+            background: #ddd linear-gradient(to right, rgb(35, 47, 211),#e45603);
+        }
+        nav{
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            background: #ddd linear-gradient(to right, #00ff4c,#63f800);
+        }
+        button{
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        li :hover{
+            background-color: rgba(17, 223, 223, 0.733);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            border-radius: 25px;
+        }
+    </style>
 </head>
 <body>
     <header>
