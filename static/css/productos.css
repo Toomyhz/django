@@ -1,0 +1,7 @@
+main{
+    background-color: rgba(255, 0, 238, 0.548);
+}
+article{
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    padding: 2%;
+}

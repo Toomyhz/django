@@ -1,0 +1,35 @@
+{% extends 'base\base.html' %}
+{% block title %}Productos{% endblock title %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/productos.css' %}">
+{% endblock css %}
+{% block content %}
+<section>
+    <section class="row">
+        <div class="col">
+            <h1 class="text-center">Productos del sistema</h1>
+        </div>
+        <div class="col">
+            <input type="text">
+        </div>
+    </section>
+    <section class="row">
+        {% for producto in productos %}
+            <div class="col-4" id="{{ producto.id }}">
+                <article class="card">
+                    <section class="card-content">
+                        <h2 class="card-title">
+                         {{ producto.nombre }}   
+                        </h2>
+                        <p class="card-text">
+                            {{ producto.detalle }}
+                        </p>
+                    </section>
+                </article>
+            </div>
+        {% endfor %}
+    </section>
+</section>
+
+{% endblock content %}

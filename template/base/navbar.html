@@ -7,16 +7,16 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav d-flex" style="align-items: center;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+            <a class="nav-link {% if request.resolver_match.url_name == 'inicio' %} active {% endif %}" href="{% url 'inicio'%}">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Productos</a>
+            <a class="nav-link {% if request.resolver_match.url_name == 'productos' %} active {% endif %}" href="/productos">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link {% if request.resolver_match.url_name == 'contacto' %} active {% endif %}" href="/contacto">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><button class="btn btn-success">Iniciar sesion</button></a>
+            <a class="nav-link" href="/iniciar"><button class="btn btn-success">Iniciar sesion</button></a>
           </li>
         </ul>
       </div>

@@ -8,36 +8,23 @@
     <title>
         {% block title %}{% endblock title %}
     </title>
-    {% block css%}
-    {% endblock css%}
-    <style>
-        body{
-            width: 100%;
-            background: #ddd linear-gradient(to right, rgb(35, 47, 211),#e45603);
-        }
-        nav{
-            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
-            background: #ddd linear-gradient(to right, #00ff4c,#63f800);
-        }
-        button{
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        li :hover{
-            background-color: rgba(17, 223, 223, 0.733);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            border-radius: 25px;
-        }
-    </style>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/base.css' %}">
+        {% block css %}{% endblock css %}
+
 </head>
 <body>
     <header>
         {% include 'base\navbar.html' %}
     </header>
-    <main>
-        
+    <main class="container">
+        {% block content %}
+        {% endblock content %}        
     </main>
-    <footer>
-        
+    <footer id="footer">
+        <section>
+            
+        </section>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
