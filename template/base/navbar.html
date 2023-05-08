@@ -7,9 +7,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-self-end justify-content-between" id="navbarNav" style="width:150px">
+      <div class="collapse navbar-collapse " id="navbarNav">
         <form class="d-flex" role="search">
-          <input id="buscar1" class="form-control me-2 transition" type="search" placeholder="Buscar" aria-label="Search">
+          <input id="buscar1" class="form-control me-2 transition" type="search" placeholder="Ingrese su busqueda.." aria-label="Search">
           <button id="buscar2" class="transition" type="submit">Buscar</button>
         </form>
         <ul class="navbar-nav d-flex" style="align-items: center;">
@@ -22,9 +22,7 @@
           <li class="nav-item">
             <a class="nav-link transition {% if request.resolver_match.url_name == 'contacto' %} active {% endif %}" href="/contacto">Contacto</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/iniciar"><button class="btn btn-outline-success">Iniciar sesion</button></a>
-          </li>
+            <button id="iniciar-sesion" class="nav-item transition"  {% if request.resolver_match.url_name == 'inicio-sesion' %} hidden {% endif %}><a class="nav-link" href="/iniciar"> Iniciar sesion </a></button>
         </ul>
       </div>
     </section>
