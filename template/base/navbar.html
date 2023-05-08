@@ -1,22 +1,29 @@
-<nav class="navbar navbar-expand-lg bg-info">
-    <section class="container">
+<nav class="navbar navbar-expand-lg " data-bs-theme="dark"">
+    <section class="container d-flex ml-4" >
       <a class="navbar-brand" href="/">Tienda</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+      <!-- Boton responsive -->
+      <button class="navbar-toggler my-3 transition" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+      <div class="collapse navbar-collapse justify-self-end justify-content-between" id="navbarNav" style="width:150px">
+        <form class="d-flex" role="search">
+          <input id="buscar1" class="form-control me-2 transition" type="search" placeholder="Buscar" aria-label="Search">
+          <button id="buscar2" class="transition" type="submit">Buscar</button>
+        </form>
         <ul class="navbar-nav d-flex" style="align-items: center;">
           <li class="nav-item">
-            <a class="nav-link {% if request.resolver_match.url_name == 'inicio' %} active {% endif %}" href="{% url 'inicio'%}">Inicio</a>
+            <a class="nav-link transition {% if request.resolver_match.url_name == 'inicio' %} active {% endif %}" href="{% url 'inicio'%}">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if request.resolver_match.url_name == 'productos' %} active {% endif %}" href="/productos">Productos</a>
+            <a class="nav-link transition {% if request.resolver_match.url_name == 'productos' %} active {% endif %}" href="/productos">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if request.resolver_match.url_name == 'contacto' %} active {% endif %}" href="/contacto">Contacto</a>
+            <a class="nav-link transition {% if request.resolver_match.url_name == 'contacto' %} active {% endif %}" href="/contacto">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/iniciar"><button class="btn btn-success">Iniciar sesion</button></a>
+            <a class="nav-link" href="/iniciar"><button class="btn btn-outline-success">Iniciar sesion</button></a>
           </li>
         </ul>
       </div>

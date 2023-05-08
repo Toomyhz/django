@@ -11,13 +11,13 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static '/css/base.css' %}">
         {% block css %}{% endblock css %}
-
+    
 </head>
 <body>
     <header>
         {% include 'base\navbar.html' %}
     </header>
-    <main class="container">
+    <main>
         {% block content %}
         {% endblock content %}        
     </main>

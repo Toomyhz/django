@@ -6,22 +6,15 @@
 {% endblock css %}
 {% block content %}
 <section>
-    <section class="row">
-        <div class="col">
-            <h1 class="text-center">Productos del sistema</h1>
-        </div>
-        <div class="col">
-            <input type="text">
-        </div>
-    </section>
+    <h2 class="textc">Productos del sistema</h2>
     <section class="row">
         {% for producto in productos %}
-            <div class="col-4" id="{{ producto.id }}">
-                <article class="card">
+            <div class="col-4 my-2 " id="{{ producto.id }}" style="height: 150px;">
+                <article class="card shad transition" style="height: 100%">
                     <section class="card-content">
-                        <h2 class="card-title">
-                         {{ producto.nombre }}   
-                        </h2>
+                        <h3 class="card-title">
+                         {{ producto.nombre }}
+                        </h3>
                         <p class="card-text">
                             {{ producto.detalle }}
                         </p>
